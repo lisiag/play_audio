@@ -1,0 +1,7 @@
+audio {
+  visibility: hidden;
+}
+
+audio::-webkit-media-controls-play-button {
+  visibility: visible;
+}

@@ -1,12 +1,20 @@
+import { VolumeUp, Notifications } from "@material-ui/icons";
+import "./HTMLAudio.css";
+
 const HTMLAudio = (props) => {
-  const heading = "HTML Audio element <audio>";
+  const audio = new Audio("audio/kokako.mp3");
+
+  const handleClick = () => {
+    audio.play();
+  };
+
   return (
     <div>
-      <h3>{heading}</h3>
-      <audio controls>
-        <source src="audio/birds_chirp.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
+      <h3>Audio() HTMLAudioElement</h3>
+      <label>Kokako</label>
+      <button className="play" onClick={handleClick}>
+        <VolumeUp />
+      </button>
     </div>
   );
 };
